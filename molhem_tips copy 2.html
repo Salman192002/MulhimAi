@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نصائح ملُهم</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function analyzePerformance() {
+            let aiResult2 = document.getElementById("aiResult2");
+            aiResult2.innerHTML = "<p><strong>تحليل الأداء:</strong></p>" +
+                "<p>✅ نقاط القوة: تواصل جيد مع الطلاب وشرح سلس.</p>" +
+                "<p>⚠ نقاط الضعف: يحتاج إلى تطوير أساليب التقييم والتفاعل.</p>" +
+                "<p>📌 نصيحة: استخدم أدوات التدريس التفاعلية لتعزيز مشاركة الطلاب.</p>";
+        }
+        
+        function getTips() {
+            let userInput = document.getElementById("userTipsInput").value;
+            let tipsResult = document.getElementById("tipsResult");
+            
+            if (userInput.trim() === "") {
+                tipsResult.innerHTML = "<p style='color: red;'>يرجى إدخال الجوانب التي تحتاج إلى تحسين.</p>";
+                return;
+            }
+            
+            tipsResult.innerHTML = "<p><strong>نصائح مخصصة لك:</strong></p>" +
+                "<p>🎯 تحسين مهارات التفاعل مع الطلاب من خلال استخدام الأنشطة الصفية.</p>" +
+                "<p>📖 قراءة كتب في تطوير الذات وأساليب التدريس الحديثة.</p>" +
+                "<p>🛠 حضور ورش عمل عن استخدام التقنية في التدريس.</p>";
+        }
+    </script>
+</head>
+<body>
+    <script src="molhem_tips.js"></script>
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="شعار ملهم.jpg" alt="شعار ملهم">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li><a href="ملهم أكادميك.html"><i class="fas fa-graduation-cap"></i> مُلهم أكاديمك</a></li>
+                    <li class="active"><a href="molhem_tips.html"><i class="fas fa-lightbulb"></i>مُلهم AI</a></li>
+                    <li><a href="Leaderboard.html"><i class="fas fa-bell"></i> قائمة النخبة</a></li>
+                    <li><a href=""><i class="fas fa-envelope"></i> تقديم طلب تدريس</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> حسابي</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> الدعم والمساعدة</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <header class="topbar">
+                <img src="شعار_ملهم2-removebg-preview.png" alt="شعار المنصة" class="header-image">
+                <div class="search-bar">
+                    <input type="text" placeholder="  البحث عن مادة جامعة...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </header>
+            
+            <!-- تحليل الأداء -->
+            <section class="ai-analysis">
+                <h1>تحليل مُلهم AI  لنقاط القوة والضعف</h1>
+                <p>اضغط على الزر لتحليل أدائك التعليمي والحصول على ملاحظات.</p>
+                <button class="btn primary" onclick="analyzePerformance()">تحليل الأداء</button>
+                <div id="aiResult2" class="ai-result2"></div>
+            </section>
+            
+            <!-- نصائح مخصصة بناءً على مدخلات المستخدم -->
+
+                    <div class="ai-tips">
+                        <h1>نصائح ملهم - مدعومة بالذكاء الاصطناعي</h1>
+                        <p>أدخل التفاصيل التي تحتاج إلى تحسينها وسنقوم بتحليلها باستخدام AI.</p>
+                        <div class="chat-container">
+                            <textarea id="userInput" placeholder="اكتب سؤالك هنا..." rows="3"></textarea>
+                            <button onclick="getAITips()">تحليل النصيحة</button>
+                        </div>
+                
+                        <!-- عرض الرد من الذكاء الاصطناعي -->
+                        <div id="aiResponse" class="ai-response"></div>
+                    </main>
+                
+                    <!-- أيقونات FontAwesome -->
+                    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+                    <script  type='module'src='molhem_tips.js'></script>
+                </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

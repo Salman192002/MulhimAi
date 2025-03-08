@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل الأبحاث - مُلهم</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="شعار ملهم.jpg" alt="شعار ملهم">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li class="active"> <a href="ملهم أكادميك.html"><i class="fas fa-graduation-cap"></i> مُلهم أكاديمك</a></li>
+                    <li><a href="molhem_tips.html"><i class="fas fa-lightbulb"></i>مُلهم AI</a></li>
+                    <li><a href="Leaderboard.html"><i class="fas fa-bell"></i> قائمة النخبة</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> تقديم طلب تدريس</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> حسابي</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> الدعم والمساعدة</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <!-- الشريط العلوي -->
+            <header class="topbar">
+                <img src="رؤية 2030.png" alt="صورة رأسية" class="header-image">
+                <div class="search-bar">
+                    <input type="text" placeholder="البحث عن تحليل الأبحاث...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-info">
+                    <span class="points">النقاط: </span>
+                    <span class="points">213 </span>
+                </div>
+            </header>
+
+            <!-- قسم عرض الأبحاث السابقة مع التقييم -->
+<section class="previous-research">
+    <h2>الأبحاث السابقة</h2>
+    <div class="research-list">
+        <div class="research-item">
+            <div class="research-content">
+                <h3>تحليل الذكاء الاصطناعي في التعليم</h3>
+                <p>بحث يتناول تأثير الذكاء الاصطناعي على تطوير المناهج التعليمية وتحليل أداء الطلاب.</p>
+                <a href="#">المزيد</a>
+            </div>
+            <div class="research-rating">
+                <span class="rating-score">4.7</span>
+                <span class="rating-stars">★★★★★</span>
+                <span class="">جودة ودقة البحث</span>
+            </div>
+        </div>
+        <div class="research-item">
+            <div class="research-content">
+                <h3>تحليل البيانات الضخمة في الأبحاث الأكاديمية</h3>
+                <p>بحث يدرس كيفية استخدام البيانات الضخمة في تحليل الاتجاهات البحثية وتطوير الاستنتاجات.</p>
+                <a href="#">المزيد</a>
+            </div>
+            <div class="research-rating">
+                <span class="rating-score">4.2</span>
+                <span class="rating-stars">★★★★☆</span>
+                <span class="">جودة ودقة البحث</span>
+            </div>
+        </div>
+        <div class="research-item">
+            <div class="research-content">
+                <h3>تأثير تقنيات الواقع المعزز في التدريس</h3>
+                <p>دراسة حول مدى فاعلية الواقع المعزز في تحسين تجربة التعلم وتعزيز التفاعل بين الطلاب.</p>
+                <a href="#">المزيد</a>
+            </div>
+            <div class="research-rating">
+                <span class="rating-score">3.8</span>
+                <span class="rating-stars">★★★☆☆</span>
+                <span class="">جودة ودقة البحث</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+            <!-- تحليل الأبحاث -->
+            <div class="research-analysis">
+                <h2>📊 تحليل الأبحاث</h2>
+                <p>قم برفع بحثك وسنقوم بتحليله ومقارنته مع تخصصك والمواد التي تقوم بتدريسها.</p>
+                
+                <button>حمّل وقيم بحثك</button>
+                <div id="analysisResult" class="result-box"></div>
+            </div>
+            
+            <!-- معدل الأبحاث السنوية -->
+            <section class="research-trend">
+                <h2>📈 معدل الأبحاث السنوية</h2>
+                <p>تحليل مدى تطور إنتاجيتك البحثية خلال السنوات الماضية.</p>
+                <button onclick="analyzeTrend()">تحليل الإنتاجية</button>
+                <div id="trendResult" class="result-box"></div>
+            </section>
+        </main>
+    </div>
+    <script type='module'src='reaserch-analysis.js'></script>
+</body>
+</html>

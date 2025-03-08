@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل طريقة التدريس - مُلهم</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="شعار ملهم.jpg" alt="شعار ملهم">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li class="active"> <a href="ملهم أكادميك.html"><i class="fas fa-graduation-cap"></i> مُلهم أكاديمك</a></li>
+                    <li><a href="molhem_tips.html"><i class="fas fa-lightbulb"></i>مُلهم AI</a></li>
+                    <li><a href="Leaderboard copy.html"><i class="fas fa-bell"></i> قائمة النخبة</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> تقديم طلب تدريس</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> حسابي</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> الدعم والمساعدة</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <!-- الشريط العلوي -->
+            <header class="topbar">
+                <img src="رؤية 2030.png" alt="صورة رأسية" class="header-image">
+                <div class="search-bar">
+                    <input type="text" placeholder="البحث عن مادة او جامعة...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-info">
+                    <span class="points">النقاط: </span>
+                    <span class="points">213 </span>
+                </div>
+            </header>
+            
+
+            <!-- قسم عرض المحاضرات السابقة -->
+<section class="previous-lectures">
+    <h2>المحاضرات السابقة</h2>
+    <div class="lecture-list">
+        <div class="lecture-item">
+            <div class="lecture-info">
+                <h3>مقدمة في الذكاء الاصطناعي</h3>
+                <p>المدة: 45 دقيقة</p>
+                <button class="details-btn" onclick="showLectureDetails(this, 0)">إظهار التفاصيل</button>
+            </div>
+            <div class="lecture-details hidden"></div>
+        </div>
+
+        <div class="lecture-item">
+            <div class="lecture-info">
+                <h3>أساسيات تعلم الآلة</h3>
+                <p>المدة: 60 دقيقة</p>
+                <button class="details-btn" onclick="showLectureDetails(this, 1)">إظهار التفاصيل</button>
+            </div>
+            <div class="lecture-details hidden"></div>
+        </div>
+
+        <div class="lecture-item">
+            <div class="lecture-info">
+                <h3>تحليل البيانات الضخمة</h3>
+                <p>المدة: 50 دقيقة</p>
+                <button class="details-btn" onclick="showLectureDetails(this, 2)">إظهار التفاصيل</button>
+            </div>
+            <div class="lecture-details hidden"></div>
+        </div>
+    </div>
+</section>
+
+            <!-- تحليل التدريس -->
+            <section class="teaching-analysis">
+                <h2>📊 تحليل طريقة التدريس</h2>
+                <p>قم بإرفاق رابط أو تسجيل المحاضرة وسنقوم بتحليل أسلوب التدريس، وتقديم الملاحظات حول الإيجابيات والسلبيات.</p>
+                <input type="url" id="lectureLink" placeholder="أدخل رابط المحاضرة">
+                <hr color="white"></hr>
+                <button onclick="analyzeTeaching()">تحميل و تحليل التدريس</button>
+                <div id="teachingResult" class="result-box"></div>
+            </section>
+
+              <!-- لوحة المؤشرات - تحليل الأداء التدريسي -->
+              <section class="dashboard">
+                <h2>📈 أداء التدريس</h2>
+                <p>مؤشر يوضح مدى تحسن أو تراجع طريقة التدريس بمرور الوقت.</p>
+                <div class="progress">
+                    <div class="progress-bar" id="teachingProgress" style="width: 75%;">75%</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        // بيانات وهمية لنصائح تحليل التدريس
+        const lectureFeedback = [
+            {
+                positives: [
+                    "أسلوب تفاعلي يجذب انتباه الطلاب.",
+                    "استخدام أمثلة عملية واضحة.",
+                    "تنظيم ممتاز للمحتوى الأكاديمي."
+                ],
+                negatives: [
+                    "سرعة الإلقاء كانت مرتفعة.",
+                    "استخدام محدود للوسائل البصرية.",
+                    "قلة إشراك الطلاب في النقاش."
+                ]
+            },
+            {
+                positives: [
+                    "عرض منظم للأفكار والتدرج المنطقي في الشرح.",
+                    "استخدام مصادر متنوعة لدعم الشرح.",
+                    "التفاعل الجيد مع استفسارات الطلاب."
+                ],
+                negatives: [
+                    "الاعتماد الكبير على النصوص بدون وسائط متعددة.",
+                    "عدم وجود أمثلة عملية كافية.",
+                    "مدة المحاضرة طويلة بدون فواصل تفاعلية."
+                ]
+            },
+            {
+                positives: [
+                    "التفاعل القوي مع الطلاب.",
+                    "تقديم ملخص للمفاهيم الرئيسية بعد كل جزء.",
+                    "دمج التقنيات الحديثة في التدريس."
+                ],
+                negatives: [
+                    "قلة التركيز على الأسئلة الشائعة.",
+                    "التحدث بسرعة أحيانًا دون توضيح كافٍ.",
+                    "قلة الأنشطة التطبيقية خلال المحاضرة."
+                ]
+            }
+        ];
+    
+        // وظيفة إظهار التفاصيل عند الضغط على الزر
+        function showLectureDetails(button, index) {
+            let detailsDiv = button.parentElement.nextElementSibling;
+            
+            // توليد المحتوى بناءً على البيانات المخزنة
+            if (detailsDiv.classList.contains("hidden")) {
+                detailsDiv.innerHTML = `
+                    <h4>تحليل طريقة التدريس:</h4>
+                    <p><strong>الإيجابيات:</strong> ${lectureFeedback[index].positives.join(", ")}</p>
+                    <p><strong>السلبيات:</strong> ${lectureFeedback[index].negatives.join(", ")}</p>
+                `;
+                detailsDiv.classList.remove("hidden");
+                detailsDiv.style.display = "block";
+                button.textContent = "إخفاء التفاصيل";
+            } else {
+                detailsDiv.classList.add("hidden");
+                detailsDiv.style.display = "none";
+                button.textContent = "إظهار التفاصيل";
+            }
+        }
+    </script> 
+    <script type='module'src='تحليل-التدريس.js'></script>
+</body>
+</html>

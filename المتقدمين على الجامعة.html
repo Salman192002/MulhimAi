@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتقدمين</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="شعار ملهم.jpg" alt="شعار ملهم">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li class="active"><a href="مُلهم جامعات.html"><i class="fas fa-lightbulb"></i>مُلهم جامعات</a></li>
+                    <li><a href="molhem_tips copy.html"><i class="fas fa-lightbulb"></i>مُلهم AI</a></li>
+                    <li><a href="Leaderboard.html"><i class="fas fa-bell"></i> قائمة النخبة</a></li>
+                    <li><a href="users.html"><i class="fas fa-users"></i> المستخدمين</a></li>
+                    <li><a href="account.html"><i class="fas fa-user"></i> حسابي</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                    <li><a href="support.html"><i class="fas fa-question-circle"></i> الدعم والمساعدة</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <!-- الشريط العلوي -->
+            <header class="topbar">
+                <img src="رؤية 2030.png" alt="صورة رأسية" class="header-image">
+                <div class="search-bar">
+                    <input type="text" placeholder="البحث عن كادر أكاديمي معين...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </header>
+
+
+            <section class="faculty-info">
+                <div class="faculty-header">
+                    <img src="د.عزوز-removebg-preview (1).png" alt="صورة الدكتور" class="faculty-img">
+                    <h2>د. عبد العزيز عامري</h2>
+                    <p><strong>التخصص:</strong> علوم الحاسب</p>
+                    <p><strong>المقرر المتقدم له:</strong> تعلم الآلة والذكاء الاصطناعي</p>
+                    <p><strong>عدد سنوات الخبرة:</strong> 10 سنوات</p>
+                    <div class="rating">
+                        <span class="rating-score">4.8/5</span> 
+                        <span class="rating-arrow">▲</span>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- ✅ معايير تقييم ملائمة الدكتور للمقرر -->
+            <section class="evaluation-criteria">
+                <h2>📊 معايير ملائمة الكادر الأكاديمي</h2>
+                <div class="evaluation-list">
+                    <div class="evaluation-item">
+                        <p>تخصص الدكتور</p>
+                        <button class="details-btn" onclick="showEvaluationDetails(0)">إظهار المزيد</button>
+                    </div>
+                    <div class="evaluation-item">
+                        <p>جودة ودقة الأبحاث القريبة من المقرر</p>
+                        <button class="details-btn" onclick="showEvaluationDetails(1)">إظهار المزيد</button>
+                    </div>
+                    <div class="evaluation-item">
+                        <p>جودة ملف المقرر</p>
+                        <button class="details-btn" onclick="showEvaluationDetails(2)">إظهار المزيد</button>
+                    </div>
+                    <div class="evaluation-item">
+                        <p>مخرجات التعلم والتقويم العادل</p>
+                        <button class="details-btn" onclick="showEvaluationDetails(3)">إظهار المزيد</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- ✅ تفاصيل التقييم (يظهر عند النقر على "إظهار المزيد") -->
+            <section id="evaluation-details" class="evaluation-details hidden">
+                <h3>تفاصيل التقييم</h3>
+                <p id="evaluation-text"></p>
+                <p class="rating">التقييم الحالي: <span class="rating-score">4/5</span> ✅</p>
+                <button class="close-btn" onclick="closeDetails()">إغلاق</button>
+            </section>
+        </main>
+    
+        <!-- ✅ كود جافا سكريبت داخل HTML -->
+        <script>
+            // ✅ بيانات تحليل الملائمة للمقرر
+            const evaluationFeedback = [
+                { 
+                    positives: "التخصص يتوافق بنسبة 95% مع المقرر.", 
+                    negatives: "يحتاج إلى تعزيز خبرته العملية أكثر.",
+                    history: ["2023: تدريس مقرر مشابه في جامعة أخرى.", "2022: نشر أبحاث في نفس المجال."]
+                },
+                { 
+                    positives: "الأبحاث المنشورة ذات صلة قوية بالمقرر.", 
+                    negatives: "نقص في الأبحاث التطبيقية.",
+                    history: ["2023: نشر بحث عن تطبيقات تعلم الآلة.", "2022: بحث عن الذكاء الاصطناعي وتأثيره في التعليم."]
+                },
+                { 
+                    positives: "ملف المقرر يحتوي على مصادر تعليمية شاملة.", 
+                    negatives: "يحتاج إلى تحديث ببعض التقنيات الحديثة.",
+                    history: ["2023: تحسين جودة الملفات بمراجع حديثة.", "2022: إضافة موارد تفاعلية."]
+                },
+                { 
+                    positives: "تقويم عادل ومستند إلى معايير أكاديمية.", 
+                    negatives: "يحتاج إلى تحسين استراتيجيات التغذية الراجعة.",
+                    history: ["2023: تطبيق نظام تقييم جديد.", "2022: زيادة الشفافية في المعايير."]
+                }
+            ];
+    
+            // ✅ وظيفة عرض تفاصيل التقييم عند النقر
+            function showEvaluationDetails(index) {
+                let detailsSection = document.getElementById("evaluation-details");
+                let detailsText = document.getElementById("evaluation-text");
+    
+                detailsText.innerHTML = `
+                    <strong>الإيجابيات:</strong> ${evaluationFeedback[index].positives}<br>
+                    <strong>السلبيات:</strong> ${evaluationFeedback[index].negatives}<br>
+                    <h4>📜 السجل السابق:</h4><ul>
+                    ${evaluationFeedback[index].history.map(item => `<li>${item}</li>`).join("")}
+                    </ul>
+                `;
+    
+                detailsSection.style.display = "block"; // ✅ إظهار القسم
+            }
+    
+            // ✅ وظيفة إغلاق نافذة التفاصيل
+            function closeDetails() {
+                document.getElementById("evaluation-details").style.display = "none";
+            }
+        </script>
+    
+    </body>
+    </html>
